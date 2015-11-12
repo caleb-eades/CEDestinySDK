@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F7D1DF8DD68C02C69AC9961 /* libPods-CEDestinySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 441C5DB22D21D00A9435BBC4 /* libPods-CEDestinySDK.a */; };
+		6A780FCE1BF51E31009FDBF3 /* CEDestinySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A780FCD1BF51E31009FDBF3 /* CEDestinySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A780FD41BF51E31009FDBF3 /* CEDestinySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A780FC81BF51E31009FDBF3 /* CEDestinySDK.framework */; };
+		6A780FDB1BF51E31009FDBF3 /* CEDestinySDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A780FDA1BF51E31009FDBF3 /* CEDestinySDKTests.swift */; };
+		6A780FE51BF51E54009FDBF3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6A780FE41BF51E54009FDBF3 /* Podfile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A780FD51BF51E31009FDBF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A780FBF1BF51E31009FDBF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A780FC71BF51E31009FDBF3;
+			remoteInfo = CEDestinySDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		441C5DB22D21D00A9435BBC4 /* libPods-CEDestinySDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CEDestinySDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5364E5EACF0FAD570125B57C /* Pods-CEDestinySDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CEDestinySDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-CEDestinySDK/Pods-CEDestinySDK.release.xcconfig"; sourceTree = "<group>"; };
+		6A780FC81BF51E31009FDBF3 /* CEDestinySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CEDestinySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A780FCC1BF51E31009FDBF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A780FCD1BF51E31009FDBF3 /* CEDestinySDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CEDestinySDK.h; sourceTree = "<group>"; };
+		6A780FD31BF51E31009FDBF3 /* CEDestinySDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CEDestinySDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A780FD91BF51E31009FDBF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A780FDA1BF51E31009FDBF3 /* CEDestinySDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEDestinySDKTests.swift; sourceTree = "<group>"; };
+		6A780FE41BF51E54009FDBF3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		7AC604CEA3085A39CF5108B6 /* Pods-CEDestinySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CEDestinySDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CEDestinySDK/Pods-CEDestinySDK.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A780FC41BF51E31009FDBF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F7D1DF8DD68C02C69AC9961 /* libPods-CEDestinySDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A780FD01BF51E31009FDBF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A780FD41BF51E31009FDBF3 /* CEDestinySDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A780FBE1BF51E31009FDBF3 = {
+			isa = PBXGroup;
+			children = (
+				6A780FE41BF51E54009FDBF3 /* Podfile */,
+				6A780FCA1BF51E31009FDBF3 /* CEDestinySDK */,
+				6A780FD71BF51E31009FDBF3 /* CEDestinySDKTests */,
+				6A780FC91BF51E31009FDBF3 /* Products */,
+				F48DA3FFF9B00F8C378CDA1B /* Pods */,
+				AEEE5F76DED84A227FF3791F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6A780FC91BF51E31009FDBF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A780FC81BF51E31009FDBF3 /* CEDestinySDK.framework */,
+				6A780FD31BF51E31009FDBF3 /* CEDestinySDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A780FCA1BF51E31009FDBF3 /* CEDestinySDK */ = {
+			isa = PBXGroup;
+			children = (
+				6A780FCD1BF51E31009FDBF3 /* CEDestinySDK.h */,
+				6A780FCB1BF51E31009FDBF3 /* Supporting Files */,
+			);
+			path = CEDestinySDK;
+			sourceTree = "<group>";
+		};
+		6A780FCB1BF51E31009FDBF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A780FCC1BF51E31009FDBF3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A780FD71BF51E31009FDBF3 /* CEDestinySDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				6A780FDA1BF51E31009FDBF3 /* CEDestinySDKTests.swift */,
+				6A780FD81BF51E31009FDBF3 /* Supporting Files */,
+			);
+			path = CEDestinySDKTests;
+			sourceTree = "<group>";
+		};
+		6A780FD81BF51E31009FDBF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A780FD91BF51E31009FDBF3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEEE5F76DED84A227FF3791F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				441C5DB22D21D00A9435BBC4 /* libPods-CEDestinySDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F48DA3FFF9B00F8C378CDA1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AC604CEA3085A39CF5108B6 /* Pods-CEDestinySDK.debug.xcconfig */,
+				5364E5EACF0FAD570125B57C /* Pods-CEDestinySDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6A780FC51BF51E31009FDBF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A780FCE1BF51E31009FDBF3 /* CEDestinySDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6A780FC71BF51E31009FDBF3 /* CEDestinySDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A780FDE1BF51E31009FDBF3 /* Build configuration list for PBXNativeTarget "CEDestinySDK" */;
+			buildPhases = (
+				338588F8A695DFC1AC4132F2 /* Check Pods Manifest.lock */,
+				6A780FC31BF51E31009FDBF3 /* Sources */,
+				6A780FC41BF51E31009FDBF3 /* Frameworks */,
+				6A780FC51BF51E31009FDBF3 /* Headers */,
+				6A780FC61BF51E31009FDBF3 /* Resources */,
+				0B32081AB8048FED6C8D18B9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CEDestinySDK;
+			productName = CEDestinySDK;
+			productReference = 6A780FC81BF51E31009FDBF3 /* CEDestinySDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6A780FD21BF51E31009FDBF3 /* CEDestinySDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A780FE11BF51E31009FDBF3 /* Build configuration list for PBXNativeTarget "CEDestinySDKTests" */;
+			buildPhases = (
+				6A780FCF1BF51E31009FDBF3 /* Sources */,
+				6A780FD01BF51E31009FDBF3 /* Frameworks */,
+				6A780FD11BF51E31009FDBF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A780FD61BF51E31009FDBF3 /* PBXTargetDependency */,
+			);
+			name = CEDestinySDKTests;
+			productName = CEDestinySDKTests;
+			productReference = 6A780FD31BF51E31009FDBF3 /* CEDestinySDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A780FBF1BF51E31009FDBF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Caleb Eades";
+				TargetAttributes = {
+					6A780FC71BF51E31009FDBF3 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					6A780FD21BF51E31009FDBF3 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 6A780FC21BF51E31009FDBF3 /* Build configuration list for PBXProject "CEDestinySDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6A780FBE1BF51E31009FDBF3;
+			productRefGroup = 6A780FC91BF51E31009FDBF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A780FC71BF51E31009FDBF3 /* CEDestinySDK */,
+				6A780FD21BF51E31009FDBF3 /* CEDestinySDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A780FC61BF51E31009FDBF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A780FE51BF51E54009FDBF3 /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A780FD11BF51E31009FDBF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B32081AB8048FED6C8D18B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CEDestinySDK/Pods-CEDestinySDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		338588F8A695DFC1AC4132F2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A780FC31BF51E31009FDBF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A780FCF1BF51E31009FDBF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A780FDB1BF51E31009FDBF3 /* CEDestinySDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A780FD61BF51E31009FDBF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A780FC71BF51E31009FDBF3 /* CEDestinySDK */;
+			targetProxy = 6A780FD51BF51E31009FDBF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6A780FDC1BF51E31009FDBF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A780FDD1BF51E31009FDBF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A780FDF1BF51E31009FDBF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC604CEA3085A39CF5108B6 /* Pods-CEDestinySDK.debug.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CEDestinySDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6A780FE01BF51E31009FDBF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5364E5EACF0FAD570125B57C /* Pods-CEDestinySDK.release.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CEDestinySDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6A780FE21BF51E31009FDBF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CEDestinySDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6A780FE31BF51E31009FDBF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CEDestinySDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A780FC21BF51E31009FDBF3 /* Build configuration list for PBXProject "CEDestinySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A780FDC1BF51E31009FDBF3 /* Debug */,
+				6A780FDD1BF51E31009FDBF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A780FDE1BF51E31009FDBF3 /* Build configuration list for PBXNativeTarget "CEDestinySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A780FDF1BF51E31009FDBF3 /* Debug */,
+				6A780FE01BF51E31009FDBF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A780FE11BF51E31009FDBF3 /* Build configuration list for PBXNativeTarget "CEDestinySDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A780FE21BF51E31009FDBF3 /* Debug */,
+				6A780FE31BF51E31009FDBF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A780FBF1BF51E31009FDBF3 /* Project object */;
+}
