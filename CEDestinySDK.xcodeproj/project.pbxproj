@@ -13,7 +13,9 @@
 		6A780FDB1BF51E31009FDBF3 /* CEDestinySDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A780FDA1BF51E31009FDBF3 /* CEDestinySDKTests.swift */; };
 		6A780FE51BF51E54009FDBF3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6A780FE41BF51E54009FDBF3 /* Podfile */; };
 		6AC533421BF5431600FE88B3 /* CEDestinySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC533411BF5431600FE88B3 /* CEDestinySDK.swift */; };
-		6AEE6FA51BF54A18007A3347 /* RestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE6FA41BF54A18007A3347 /* RestUtility.swift */; };
+		6AEE6FA51BF54A18007A3347 /* CERestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE6FA41BF54A18007A3347 /* CERestUtility.swift */; };
+		6AEE6FA81BF642E0007A3347 /* CEAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE6FA71BF642E0007A3347 /* CEAccount.swift */; };
+		6AEE6FAC1BF66C43007A3347 /* CEMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE6FAB1BF66C43007A3347 /* CEMappable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,9 @@
 		6A780FDA1BF51E31009FDBF3 /* CEDestinySDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEDestinySDKTests.swift; sourceTree = "<group>"; };
 		6A780FE41BF51E54009FDBF3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6AC533411BF5431600FE88B3 /* CEDestinySDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEDestinySDK.swift; sourceTree = "<group>"; };
-		6AEE6FA41BF54A18007A3347 /* RestUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestUtility.swift; sourceTree = "<group>"; };
+		6AEE6FA41BF54A18007A3347 /* CERestUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CERestUtility.swift; sourceTree = "<group>"; };
+		6AEE6FA71BF642E0007A3347 /* CEAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEAccount.swift; sourceTree = "<group>"; };
+		6AEE6FAB1BF66C43007A3347 /* CEMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEMappable.swift; sourceTree = "<group>"; };
 		7AC604CEA3085A39CF5108B6 /* Pods-CEDestinySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CEDestinySDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CEDestinySDK/Pods-CEDestinySDK.debug.xcconfig"; sourceTree = "<group>"; };
 		B1C9AE6E037703A097E6CBF4 /* Pods_CEDestinySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CEDestinySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +124,7 @@
 		6AC533401BF5430500FE88B3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6AEE6FA61BF642CF007A3347 /* Model */,
 				6AEE6FA31BF54A00007A3347 /* Utility */,
 				6AC533411BF5431600FE88B3 /* CEDestinySDK.swift */,
 			);
@@ -129,9 +134,18 @@
 		6AEE6FA31BF54A00007A3347 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				6AEE6FA41BF54A18007A3347 /* RestUtility.swift */,
+				6AEE6FA41BF54A18007A3347 /* CERestUtility.swift */,
+				6AEE6FAB1BF66C43007A3347 /* CEMappable.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		6AEE6FA61BF642CF007A3347 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6AEE6FA71BF642E0007A3347 /* CEAccount.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		AEEE5F76DED84A227FF3791F /* Frameworks */ = {
@@ -294,7 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AEE6FA51BF54A18007A3347 /* RestUtility.swift in Sources */,
+				6AEE6FA81BF642E0007A3347 /* CEAccount.swift in Sources */,
+				6AEE6FAC1BF66C43007A3347 /* CEMappable.swift in Sources */,
+				6AEE6FA51BF54A18007A3347 /* CERestUtility.swift in Sources */,
 				6AC533421BF5431600FE88B3 /* CEDestinySDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

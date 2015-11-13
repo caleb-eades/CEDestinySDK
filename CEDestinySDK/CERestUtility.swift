@@ -9,7 +9,7 @@
 import Foundation
 import AFNetworking
 
-class RestUtility {
+class CERestUtility {
     var requestOperationManager: AFHTTPRequestOperationManager!
     
     init(apiKey: String) {
@@ -28,7 +28,7 @@ class RestUtility {
             }
         }
         
-        let failureHandler = { (operation: AFHTTPRequestOperation, error: NSError) -> Void in
+        let failureHandler = { (operation: AFHTTPRequestOperation?, error: NSError) -> Void in
             if let failureCallback = failure {
                 failureCallback(error)
             }

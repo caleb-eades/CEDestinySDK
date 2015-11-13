@@ -11,10 +11,13 @@ import XCTest
 import CEDestinySDK
 
 class CEDestinySDKTests: XCTestCase {
+    var destinySDK: CEDestinySDK?
+    let destinyMembershipId: Int = 4611686018449355789
+    let characterId: Int = 4611686018449355789
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.destinySDK = CEDestinySDK(apiKey: "aa8ee11103a0466097f2b54fbcbff048")
     }
     
     override func tearDown() {
@@ -22,21 +25,64 @@ class CEDestinySDKTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testGetAccountByMembershipTypeAndID() {
+        let expectation = self.expectationWithDescription("Completion handler called")
+        let successHandler = { (data: NSDictionary) -> Void in
+            XCTAssert(true)
+            expectation.fulfill()
+        }
+        let failureHandler = {(error: NSError) -> Void in
+            println(error)
+            XCTAssert(false)
+            expectation.fulfill()
+        }
+        self.destinySDK!.getAccountSummary(CEDestinySDK.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, success: successHandler, failure: failureHandler)
+        waitForExpectationsWithTimeout(1000, handler: nil)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+    func testGetActivityHistoryForCharacter() {
+        let expectation = self.expectationWithDescription("Completion handler called")
+        let successHandler = { (data: NSDictionary) -> Void in
+            XCTAssert(true)
+            expectation.fulfill()
         }
+        let failureHandler = {(error: NSError) -> Void in
+            println(error)
+            XCTAssert(false)
+            expectation.fulfill()
+        }
+        self.destinySDK!.getActivityHistoryForCharacter(CEDestinySDK.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, characterId: self.characterId, success: successHandler, failure: failureHandler)
+        waitForExpectationsWithTimeout(1000, handler: nil)
+    }
+    
+    func testGetItems() {
+        let expectation = self.expectationWithDescription("Completion handler called")
+        let successHandler = { (data: NSDictionary) -> Void in
+            XCTAssert(true)
+            expectation.fulfill()
+        }
+        let failureHandler = {(error: NSError) -> Void in
+            println(error)
+            XCTAssert(false)
+            expectation.fulfill()
+        }
+        self.destinySDK!.getItems(CEDestinySDK.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, success: successHandler, failure: failureHandler)
+        waitForExpectationsWithTimeout(1000, handler: nil)
     }
     
     func testSearchForAccountByPlatformAndUsername() {
-        let destinySDK: CEDestinySDK = CEDestinySDK(apiKey: "aa8ee11103a0466097f2b54fbcbff048")
-        destinySDK.searchForAccountByPlatformAndUsername(CEDestinySDK.Platform.XBOX, username: "Bilbo0fBagEnd", success: nil, failure: nil)
+        let expectation = self.expectationWithDescription("Completion handler called")
+        let successHandler = { (data: NSDictionary) -> Void in
+            XCTAssert(true)
+            expectation.fulfill()
+        }
+        let failureHandler = { (error: NSError) -> Void in
+            println(error)
+            XCTAssert(false)
+            expectation.fulfill()
+        }
+        self.destinySDK!.searchForAccount(CEDestinySDK.MembershipType.XBOX, displayName: "Bilbo0fBagEnd", success: successHandler, failure: failureHandler)
+        waitForExpectationsWithTimeout(1000, handler: nil)
     }
     
 }
