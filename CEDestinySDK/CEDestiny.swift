@@ -29,8 +29,7 @@ public class CEDestiny {
         let urlString: String = "/Platform/Destiny/\(membershipType.value)/Account/\(destinyMembershipId)/Summary"
         let successHandler = { (data: NSDictionary) -> Void in
             if let successCallback = success {
-                let response: CEResponse = CEResponse(data: data)
-                successCallback(response)
+                successCallback(CEResponse(data: data))
             }
         }
         let failureHandler = { (error: NSError) -> Void in
@@ -55,8 +54,7 @@ public class CEDestiny {
         let urlString: String = "/Platform/Destiny/Stats/ActivityHistory/\(membershipType.value)/\(destinyMembershipId)/\(characterId)"
         let successHandler = { (data: NSDictionary) -> Void in
             if let successCallback = success {
-                let response: CEResponse = CEResponse(data: data)
-                successCallback(response)
+                successCallback(CEResponse(data: data))
             }
         }
         let failureHandler = { (error: NSError) -> Void in
@@ -76,11 +74,11 @@ public class CEDestiny {
     - Parameter success: Success Callback (Optional)
     - Parameter failure: Failure Callback (Optional)
     */
-    public func getItems(membershipType: CEEnums.MembershipType, destinyMembershipId: Int, success: ((NSDictionary) -> Void)?, failure: ((NSError) -> Void)?) {
+    public func getItems(membershipType: CEEnums.MembershipType, destinyMembershipId: Int, success: ((CEResponse) -> Void)?, failure: ((NSError) -> Void)?) {
         let urlString: String = "/Platform/Destiny/\(membershipType.value)/Account/\(destinyMembershipId)/Items/"
         let successHandler = { (data: NSDictionary) -> Void in
             if let successCallback = success {
-                successCallback(data)
+                successCallback(CEResponse(data: data))
             }
         }
         let failureHandler = { (error: NSError) -> Void in
@@ -100,11 +98,11 @@ public class CEDestiny {
     - Parameter success: Success Callback (Optional)
     - Parameter failure: Failure Callback (Optional)
     */
-    public func searchForAccount(membershipType: CEEnums.MembershipType, displayName: String, success: ((NSDictionary) -> Void)?, failure: ((NSError) -> Void)?) -> Void {
+    public func searchForAccount(membershipType: CEEnums.MembershipType, displayName: String, success: ((CEResponse) -> Void)?, failure: ((NSError) -> Void)?) -> Void {
         let urlString: String = "/Platform/Destiny/SearchDestinyPlayer/\(membershipType.value)/\(displayName)"
         let successHandler = { (data: NSDictionary) -> Void in
             if let successCallback = success {
-                successCallback(data)
+                successCallback(CEResponse(data: data))
             }
         }
         let failureHandler = { (error: NSError) -> Void in

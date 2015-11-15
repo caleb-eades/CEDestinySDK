@@ -57,7 +57,7 @@ class CEDestinyTests: XCTestCase {
     
     func testGetItems() {
         let expectation = self.expectationWithDescription("Completion handler called")
-        let successHandler = { (data: NSDictionary) -> Void in
+        let successHandler = { (data: CEResponse) -> Void in
             XCTAssert(true)
             expectation.fulfill()
         }
@@ -72,7 +72,7 @@ class CEDestinyTests: XCTestCase {
     
     func testSearchForAccountByPlatformAndUsername() {
         let expectation = self.expectationWithDescription("Completion handler called")
-        let successHandler = { (data: NSDictionary) -> Void in
+        let successHandler = { (data: CEResponse) -> Void in
             XCTAssert(true)
             expectation.fulfill()
         }
