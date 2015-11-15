@@ -10,14 +10,14 @@ import UIKit
 import XCTest
 import CEDestinySDK
 
-class CEDestinySDKTests: XCTestCase {
-    var destinySDK: CEDestinySDK?
+class CEDestinyTests: XCTestCase {
+    var destiny: CEDestiny?
     let destinyMembershipId: Int = 4611686018449355789
-    let characterId: Int = 4611686018449355789
+    let characterId: Int = 2305843009300955854
     
     override func setUp() {
         super.setUp()
-        self.destinySDK = CEDestinySDK(apiKey: "aa8ee11103a0466097f2b54fbcbff048")
+        self.destiny = CEDestiny(apiKey: "aa8ee11103a0466097f2b54fbcbff048")
     }
     
     override func tearDown() {
@@ -25,33 +25,33 @@ class CEDestinySDKTests: XCTestCase {
         super.tearDown()
     }
     
-    func testGetAccountByMembershipTypeAndID() {
+    func testGetAccountSummary() {
         let expectation = self.expectationWithDescription("Completion handler called")
-        let successHandler = { (data: NSDictionary) -> Void in
+        let successHandler = { (data: CEResponse) -> Void in
             XCTAssert(true)
             expectation.fulfill()
         }
         let failureHandler = {(error: NSError) -> Void in
-            println(error)
+            print(error)
             XCTAssert(false)
             expectation.fulfill()
         }
-        self.destinySDK!.getAccountSummary(CEDestinySDK.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, success: successHandler, failure: failureHandler)
+        self.destiny!.getAccountSummary(CEEnums.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, success: successHandler, failure: failureHandler)
         waitForExpectationsWithTimeout(1000, handler: nil)
     }
     
     func testGetActivityHistoryForCharacter() {
         let expectation = self.expectationWithDescription("Completion handler called")
-        let successHandler = { (data: NSDictionary) -> Void in
+        let successHandler = { (data: CEResponse) -> Void in
             XCTAssert(true)
             expectation.fulfill()
         }
         let failureHandler = {(error: NSError) -> Void in
-            println(error)
+            print(error)
             XCTAssert(false)
             expectation.fulfill()
         }
-        self.destinySDK!.getActivityHistoryForCharacter(CEDestinySDK.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, characterId: self.characterId, success: successHandler, failure: failureHandler)
+        self.destiny!.getActivityHistoryForCharacter(CEEnums.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, characterId: self.characterId, success: successHandler, failure: failureHandler)
         waitForExpectationsWithTimeout(1000, handler: nil)
     }
     
@@ -62,11 +62,11 @@ class CEDestinySDKTests: XCTestCase {
             expectation.fulfill()
         }
         let failureHandler = {(error: NSError) -> Void in
-            println(error)
+            print(error)
             XCTAssert(false)
             expectation.fulfill()
         }
-        self.destinySDK!.getItems(CEDestinySDK.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, success: successHandler, failure: failureHandler)
+        self.destiny!.getItems(CEEnums.MembershipType.XBOX, destinyMembershipId: self.destinyMembershipId, success: successHandler, failure: failureHandler)
         waitForExpectationsWithTimeout(1000, handler: nil)
     }
     
@@ -77,11 +77,11 @@ class CEDestinySDKTests: XCTestCase {
             expectation.fulfill()
         }
         let failureHandler = { (error: NSError) -> Void in
-            println(error)
+            print(error)
             XCTAssert(false)
             expectation.fulfill()
         }
-        self.destinySDK!.searchForAccount(CEDestinySDK.MembershipType.XBOX, displayName: "Bilbo0fBagEnd", success: successHandler, failure: failureHandler)
+        self.destiny!.searchForAccount(CEEnums.MembershipType.XBOX, displayName: "Bilbo0fBagEnd", success: successHandler, failure: failureHandler)
         waitForExpectationsWithTimeout(1000, handler: nil)
     }
     

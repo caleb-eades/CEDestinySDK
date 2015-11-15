@@ -12,7 +12,7 @@ public class CEAccount: CEMappable {
     required public init(data: NSDictionary) {
     }
     func toDictionary(data: AnyObject) -> NSDictionary {
-        var dict: NSDictionary = NSDictionary();
+        let dict: NSDictionary = NSDictionary();
         return dict;
     }
 }

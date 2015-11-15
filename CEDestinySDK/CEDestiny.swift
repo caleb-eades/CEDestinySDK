@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class CEDestinySDK {
+public class CEDestiny {
     
     var restUtility: CERestUtility
     public init(apiKey: String) {
@@ -25,11 +25,12 @@ public class CEDestinySDK {
     - Parameter success: Success Callback (Optional)
     - Parameter failure: Failure Callback (Optional)
     */
-    public func getAccountSummary(membershipType: MembershipType, destinyMembershipId: Int, success: ((NSDictionary) -> Void)?, failure: ((NSError) -> Void)?) -> Void {
+    public func getAccountSummary(membershipType: CEEnums.MembershipType, destinyMembershipId: Int, success: ((CEResponse) -> Void)?, failure: ((NSError) -> Void)?) -> Void {
         let urlString: String = "/Platform/Destiny/\(membershipType.value)/Account/\(destinyMembershipId)/Summary"
         let successHandler = { (data: NSDictionary) -> Void in
             if let successCallback = success {
-                successCallback(data)
+                let response: CEResponse = CEResponse(data: data)
+                successCallback(response)
             }
         }
         let failureHandler = { (error: NSError) -> Void in
@@ -50,11 +51,12 @@ public class CEDestinySDK {
     - Parameter success: Success Callback (Optional)
     - Parameter failure: Failure Callback (Optional)
     */
-    public func getActivityHistoryForCharacter(membershipType: MembershipType, destinyMembershipId: Int, characterId: Int, success: ((NSDictionary) -> Void)?, failure: ((NSError) -> Void)?) {
+    public func getActivityHistoryForCharacter(membershipType: CEEnums.MembershipType, destinyMembershipId: Int, characterId: Int, success: ((CEResponse) -> Void)?, failure: ((NSError) -> Void)?) {
         let urlString: String = "/Platform/Destiny/Stats/ActivityHistory/\(membershipType.value)/\(destinyMembershipId)/\(characterId)"
         let successHandler = { (data: NSDictionary) -> Void in
             if let successCallback = success {
-                successCallback(data)
+                let response: CEResponse = CEResponse(data: data)
+                successCallback(response)
             }
         }
         let failureHandler = { (error: NSError) -> Void in
@@ -74,7 +76,7 @@ public class CEDestinySDK {
     - Parameter success: Success Callback (Optional)
     - Parameter failure: Failure Callback (Optional)
     */
-    public func getItems(membershipType: MembershipType, destinyMembershipId: Int, success: ((NSDictionary) -> Void)?, failure: ((NSError) -> Void)?) {
+    public func getItems(membershipType: CEEnums.MembershipType, destinyMembershipId: Int, success: ((NSDictionary) -> Void)?, failure: ((NSError) -> Void)?) {
         let urlString: String = "/Platform/Destiny/\(membershipType.value)/Account/\(destinyMembershipId)/Items/"
         let successHandler = { (data: NSDictionary) -> Void in
             if let successCallback = success {
@@ -98,7 +100,7 @@ public class CEDestinySDK {
     - Parameter success: Success Callback (Optional)
     - Parameter failure: Failure Callback (Optional)
     */
-    public func searchForAccount(membershipType: MembershipType, displayName: String, success: ((NSDictionary) -> Void)?, failure: ((NSError) -> Void)?) -> Void {
+    public func searchForAccount(membershipType: CEEnums.MembershipType, displayName: String, success: ((NSDictionary) -> Void)?, failure: ((NSError) -> Void)?) -> Void {
         let urlString: String = "/Platform/Destiny/SearchDestinyPlayer/\(membershipType.value)/\(displayName)"
         let successHandler = { (data: NSDictionary) -> Void in
             if let successCallback = success {
@@ -111,37 +113,5 @@ public class CEDestinySDK {
             }
         }
         self.restUtility.GET(urlString, parameters: nil, success: successHandler, failure: failureHandler)
-    }
-    
-    // MARK: Enums
-    public enum MembershipType: Int {
-        case XBOX = 1, PSN
-        var value: Int {
-            switch self {
-            case .XBOX: return 1;
-            case .PSN: return 2;
-            }
-        }
-    }
-    
-    public enum ClassType: Int {
-        case TITAN = 0, HUNTER, WARLOCK
-        var value: Int {
-            switch self {
-            case .TITAN: return 0;
-            case .HUNTER: return 1;
-            case .WARLOCK: return 2;
-            }
-        }
-    }
-    
-    public enum Gender: Int {
-        case MALE = 0, FEMALE
-        var value: Int {
-            switch self {
-            case .MALE: return 0;
-            case .FEMALE: return 1;
-            }
-        }
     }
 }
